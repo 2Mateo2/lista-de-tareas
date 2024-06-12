@@ -1,0 +1,148 @@
+.item-lista-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  position: relative;
+}
+
+.lista-titulo {
+  margin: 0;
+  text-align: center;
+  flex-grow: 1;
+  font-size: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.back-button {
+  padding: 10px;
+  background-color: #2a2a40;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.back-button:hover {
+  background-color: #5a01a7;
+}
+
+.form-y-eliminar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.eliminar-todo-button {
+  padding: 14px 20px;
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.eliminar-todo-button:hover {
+  background-color: #e74c3c;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.confirm-button, .cancel-button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.black {
+  color: black;
+}
+
+.confirm-button {
+  background-color: #c0392b;
+  color: white;
+}
+
+.confirm-button:hover {
+  background-color: #e74c3c;
+}
+
+.cancel-button {
+  background-color: #bdc3c7;
+  color: #2c3e50;
+}
+
+.cancel-button:hover {
+  background-color: #95a5a6;
+}
+
+@media (max-width: 768px) {
+  .lista-titulo {
+    font-size: 1.2rem;
+  }
+
+  .form-y-eliminar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .eliminar-todo-button {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .eliminar-todo-button::before {
+    content: ' Eliminar todo los items ';
+  }
+}
+
